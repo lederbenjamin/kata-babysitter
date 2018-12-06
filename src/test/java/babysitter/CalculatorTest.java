@@ -31,5 +31,20 @@ public class CalculatorTest {
 		
 		assertEquals(fakePay, calculator.getTotalPay());
 	}
+	
+	@Test
+	public void onlyFamilyAShouldBeTrue() {
+		
+		calculator.setFamilyA(true);
+		calculator.setFamilyB(false);
+		calculator.setFamilyC(false);
+		
+		assertEquals(true, calculator.isFamilyA());
+		assertEquals(false, calculator.isFamilyB());
+		assertEquals(false, calculator.isFamilyC());
+
+	}
+	
+	
 
 }

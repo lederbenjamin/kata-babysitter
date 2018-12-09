@@ -20,12 +20,18 @@ public class CalculatorTest {
 		assertNotNull(calculator);
 	}
 	
-	@SuppressWarnings("deprecation")
 	@Test
-	public void shouldBePaidAt15anHourForFamilyA() {
+	public void shouldBePaidAt15AnHourForFamilyA() {
 		calculator.calculatePayForFamilyA(17, 23);
 		
 		assertEquals(90, calculator.getTotalPay(), 0);
+	}
+	
+	@Test
+	public void shouldBePaidAt15AnHourAnd20AnHourForFamilyA() {
+		calculator.calculatePayForFamilyA(17, 28);
+		
+		assertEquals(190, calculator.getTotalPay(), 0);
 	}
 	
 	

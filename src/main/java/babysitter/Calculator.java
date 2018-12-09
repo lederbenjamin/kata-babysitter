@@ -26,12 +26,16 @@ public class Calculator {
         else if (startTime < 22 && endTime > 22 && endTime <= 24) {
         	totalPay = ((22 - startTime) * 12) + ((endTime - 22) * 8);
         }
-        else if (startTime >= 22 && endTime <= 24) {
-        	totalPay = ((endTime - startTime) * 8);
-        }
         else if (startTime < 22 && endTime > 24) {
         	totalPay = ((22 - startTime) * 12) + ((endTime - 24) * 20) + 16;
         }
+        else if (startTime >= 22 && endTime <= 24) {
+        	totalPay = ((endTime - startTime) * 8);
+        }
+        else if (startTime >= 22 && startTime < 24 && endTime > 24) {
+        	totalPay = (Math.abs((startTime - 24)) * 8) + ((endTime - 24) * 20);
+        }
+        
         
 	}
 

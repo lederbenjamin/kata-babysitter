@@ -56,6 +56,13 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void shouldBePaidAt12AnHourAnd8AnHourAnd20AnHourForFamilyB() {
+		calculator.calculatePayForFamilyB(17, 28);
+		
+		assertEquals(156, calculator.getTotalPay(), 0);
+	}
+	
+	@Test
 	public void shouldBePaidAt8AnHourForFamilyB() {
 		calculator.calculatePayForFamilyB(22, 24);
 		
@@ -63,10 +70,10 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void shouldBePaidAt12AnHourAnd8AnHourAnd20AnHourForFamilyB() {
-		calculator.calculatePayForFamilyB(17, 28);
+	public void shouldBePaidAt8AnHourAnd20AnHourForFamilyB() {
+		calculator.calculatePayForFamilyB(22, 28);
 		
-		assertEquals(156, calculator.getTotalPay(), 0);
+		assertEquals(96, calculator.getTotalPay(), 0);
 	}
 	
 	

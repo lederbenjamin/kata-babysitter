@@ -44,6 +44,9 @@ public class Calculator {
 		if (endTime <= 21) {
 			totalPay = (endTime - startTime) * 21;
 		}
+		else if (startTime < 21 && endTime > 21) {
+			totalPay = ((21 - startTime) * 21) + ((endTime - 21) * 15);
+        }
 	}
 	
 	

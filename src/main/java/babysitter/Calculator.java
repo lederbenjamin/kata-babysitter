@@ -40,6 +40,12 @@ public class Calculator {
         } 
 	}
 	
+	public void calculatePayForFamilyC(int startTime, int endTime) {
+		if (endTime <= 21) {
+			totalPay = (endTime - startTime) * 21;
+		}
+	}
+	
 	
 
 	public double getTotalPay() {

@@ -22,7 +22,10 @@ public class Calculator {
 	public void calculatePayForFamilyB(int startTime, int endTime) {
         if (endTime <= 22) {
         	totalPay = (endTime - startTime) * 12;
-        } 
+        }
+        else if (startTime < 22 && endTime > 22 && endTime <= 24) {
+        	totalPay = ((22 - startTime) * 12) + ((endTime - 22) * 8);
+        }
 	}
 
 	public double getTotalPay() {

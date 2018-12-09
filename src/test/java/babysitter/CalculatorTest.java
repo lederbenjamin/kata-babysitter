@@ -41,6 +41,13 @@ public class CalculatorTest {
 		assertEquals(100, calculator.getTotalPay(), 0);
 	}
 	
+	@Test
+	public void shouldBePaidAt12AnHourForFamilyB() {
+		calculator.calculatePayForFamilyB(17, 22);
+		
+		assertEquals(60, calculator.getTotalPay(), 0);
+	}
+	
 	
 
 }

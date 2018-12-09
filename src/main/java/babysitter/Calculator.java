@@ -18,6 +18,12 @@ public class Calculator {
     		totalPay = (endTime - startTime) * 20;
     	}
 	}
+	
+	public void calculatePayForFamilyB(int startTime, int endTime) {
+        if (endTime <= 22) {
+        	totalPay = (endTime - startTime) * 12;
+        } 
+	}
 
 	public double getTotalPay() {
 		return totalPay;

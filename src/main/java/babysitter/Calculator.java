@@ -35,6 +35,9 @@ public class Calculator {
         else if (startTime >= 22 && startTime < 24 && endTime > 24) {
         	totalPay = (Math.abs((startTime - 24)) * 8) + ((endTime - 24) * 20);
         }
+        else if (startTime >= 24) {
+        	totalPay = ((endTime - startTime) * 20);
+        }
         
         
 	}

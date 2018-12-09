@@ -29,6 +29,10 @@ public class Calculator {
         else if (startTime >= 22 && endTime <= 24) {
         	totalPay = ((endTime - startTime) * 8);
         }
+        else if (startTime < 22 && endTime > 24) {
+        	totalPay = ((22 - startTime) * 12) + ((endTime - 24) * 20) + 16;
+        }
+        
 	}
 
 	public double getTotalPay() {

@@ -13,10 +13,15 @@ import org.junit.Test;
 public class CalculatorTest {
 	
 	private Calculator calculator;
+	private OutputStream os;
+	private PrintStream ps;
 
 	@Before
 	public void setup() {
 		calculator = new Calculator();
+		os = new ByteArrayOutputStream();
+		ps = new PrintStream(os);
+		System.setOut(ps);
 	}
 
 	
@@ -118,14 +123,9 @@ public class CalculatorTest {
 	
 	@Test
 	public void shouldBeAbleToSetStartTimePriorTo17() {
-		OutputStream os = new ByteArrayOutputStream();
-		PrintStream ps = new PrintStream(os);
-		System.setOut(ps);
-		
 		calculator.setStartTime(16);
 
 		
 		assertEquals("You cannot start before 17:00", os.toString());
 		}
-
 }

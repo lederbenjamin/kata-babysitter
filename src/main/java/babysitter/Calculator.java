@@ -6,7 +6,7 @@ public class Calculator {
 	private int startTime;
 	private int endTime;
 	private String family;
-
+	
 	public Calculator() {
 	}
 
@@ -98,7 +98,18 @@ public class Calculator {
 	}
 
 	public void setFamily(String family) {
-		this.family = family;
+		if(family.equalsIgnoreCase("A")) {
+			this.family = family;
+		}
+		else if(family.equalsIgnoreCase("B")) {
+			this.family = family;
+		}
+		else if(family.equalsIgnoreCase("C")) {
+			this.family = family;
+		}
+		else {
+			System.out.print("That is not a valid family");
+		}
 	}
 
 }

@@ -165,4 +165,11 @@ public class CalculatorTest {
 		assertEquals("A", calculator.getFamily());
 	}
 	
+	@Test
+	public void shouldOnlyBeAbleToSetFamilyToABC() {
+		calculator.setFamily("D");
+		
+		assertEquals("That is not a valid family", os.toString());
+	}
+	
 }

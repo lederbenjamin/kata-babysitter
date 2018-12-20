@@ -83,6 +83,9 @@ public class Calculator {
 	}
 
 	public void setEndTime(int endTime) {
+		if(endTime < startTime) {
+			System.out.print("You cannot end working before you start");
+		}
 		this.endTime = endTime;
 	}
 	

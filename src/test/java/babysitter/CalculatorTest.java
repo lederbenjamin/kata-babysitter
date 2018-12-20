@@ -142,5 +142,13 @@ public class CalculatorTest {
 		assertEquals(18, calculator.getEndTime());
 	}
 	
+	@Test
+	public void shouldNotBeAbleToEndWorkBeforeStart() {
+		calculator.setStartTime(18);
+		calculator.setEndTime(17);
+
+		assertEquals("You cannot end working before you start", os.toString());
+	}
+	
 	
 }

@@ -86,6 +86,9 @@ public class Calculator {
 		if(endTime < startTime) {
 			System.out.print("You cannot end working before you start");
 		}
+		else if(endTime > 28) {
+			System.out.print("You cannot work past 28:00");
+		}
 		this.endTime = endTime;
 	}
 	

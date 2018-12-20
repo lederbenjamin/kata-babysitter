@@ -150,5 +150,13 @@ public class CalculatorTest {
 		assertEquals("You cannot end working before you start", os.toString());
 	}
 	
+	@Test
+	public void shouldNotBeAbleToEndWorkAfter28() {
+		calculator.setStartTime(18);
+		calculator.setEndTime(29);
+
+		assertEquals("You cannot work past 28:00", os.toString());
+	}
+	
 	
 }

@@ -135,4 +135,12 @@ public class CalculatorTest {
 		assertEquals("You must work at least 1 hour", os.toString());
 		}
 	
+	@Test
+	public void shouldBeAbleToSetEndTime() {
+		calculator.setEndTime(18);
+		
+		assertEquals(18, calculator.getEndTime());
+	}
+	
+	
 }

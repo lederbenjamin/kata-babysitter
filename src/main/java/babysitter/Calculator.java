@@ -77,6 +77,14 @@ public class Calculator {
 			this.startTime = startTime;
 		}
 	}
+
+	public int getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(int endTime) {
+		this.endTime = endTime;
+	}
 	
 	
 	

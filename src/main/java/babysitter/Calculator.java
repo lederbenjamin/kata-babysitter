@@ -3,6 +3,7 @@ package babysitter;
 public class Calculator {
 
 	double totalPay;
+	int startTime;
 
 	public Calculator() {
 	}
@@ -51,11 +52,21 @@ public class Calculator {
     		totalPay = (endTime - startTime) * 15;
     	}
 	}
-	
-	
+
+	public void setTotalPay(double totalPay) {
+		this.totalPay = totalPay;
+	}
 
 	public double getTotalPay() {
 		return totalPay;
+	}
+	
+	public int getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(int startTime) {
+		this.startTime = startTime;
 	}
 
 }

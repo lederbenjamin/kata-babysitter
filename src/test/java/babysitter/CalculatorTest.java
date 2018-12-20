@@ -104,6 +104,15 @@ public class CalculatorTest {
 		assertEquals(105, calculator.getTotalPay(), 0);
 	}
 	
+	@Test
+	public void shouldBeAbleToSetStartTime() {
+		calculator.setStartTime(17);
+		
+		assertEquals(17, calculator.getStartTime());
+	}
+	
+	
+	
 	
 
 }

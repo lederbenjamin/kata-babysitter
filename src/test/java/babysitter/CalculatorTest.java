@@ -1,6 +1,11 @@
 package babysitter;
 
 import static org.junit.Assert.*;
+
+import java.io.ByteArrayOutputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -111,8 +116,16 @@ public class CalculatorTest {
 		assertEquals(17, calculator.getStartTime());
 	}
 	
-	
-	
-	
+	@Test
+	public void shouldBeAbleToSetStartTimePriorTo17() {
+		OutputStream os = new ByteArrayOutputStream();
+		PrintStream ps = new PrintStream(os);
+		System.setOut(ps);
+		
+		calculator.setStartTime(16);
+
+		
+		assertEquals("You cannot start before 17:00", os.toString());
+		}
 
 }

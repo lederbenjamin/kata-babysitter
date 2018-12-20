@@ -66,7 +66,12 @@ public class Calculator {
 	}
 
 	public void setStartTime(int startTime) {
-		this.startTime = startTime;
+		if(startTime < 17) {
+			System.out.print("You cannot start before 17:00");
+		}
+		else {
+			this.startTime = startTime;
+		}
 	}
 
 }

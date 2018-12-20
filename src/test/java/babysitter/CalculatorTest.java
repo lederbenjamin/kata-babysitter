@@ -158,5 +158,11 @@ public class CalculatorTest {
 		assertEquals("You cannot work past 28:00", os.toString());
 	}
 	
+	@Test
+	public void shouldBeAbleToSetFamily() {
+		calculator.setFamily("A");
+		
+		assertEquals("A", calculator.getFamily());
+	}
 	
 }

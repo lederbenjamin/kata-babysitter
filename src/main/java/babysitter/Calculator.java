@@ -5,6 +5,7 @@ public class Calculator {
 	private double totalPay;
 	private int startTime;
 	private int endTime;
+	private String family;
 
 	public Calculator() {
 	}
@@ -91,9 +92,13 @@ public class Calculator {
 		}
 		this.endTime = endTime;
 	}
-	
-	
-	
-	
+
+	public String getFamily() {
+		return family;
+	}
+
+	public void setFamily(String family) {
+		this.family = family;
+	}
 
 }

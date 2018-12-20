@@ -2,8 +2,9 @@ package babysitter;
 
 public class Calculator {
 
-	double totalPay;
-	int startTime;
+	private double totalPay;
+	private int startTime;
+	private int endTime;
 
 	public Calculator() {
 	}
@@ -69,9 +70,16 @@ public class Calculator {
 		if(startTime < 17) {
 			System.out.print("You cannot start before 17:00");
 		}
+		else if(startTime > 27) {
+			System.out.print("You must work at least 1 hour");
+		}
 		else {
 			this.startTime = startTime;
 		}
 	}
+	
+	
+	
+	
 
 }

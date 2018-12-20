@@ -122,10 +122,17 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void shouldBeAbleToSetStartTimePriorTo17() {
+	public void shouldNotBeAbleToSetStartTimePriorTo17() {
 		calculator.setStartTime(16);
 
-		
 		assertEquals("You cannot start before 17:00", os.toString());
 		}
+	
+	@Test
+	public void shouldNotBeAbleToSetStartTimeAfter27() {
+		calculator.setStartTime(28);
+
+		assertEquals("You must work at least 1 hour", os.toString());
+		}
+	
 }

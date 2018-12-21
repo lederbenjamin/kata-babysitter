@@ -1,5 +1,6 @@
 package babysitter;
 
+
 public class Calculator {
 
 	private double totalPay;
@@ -53,10 +54,6 @@ public class Calculator {
     	else if (startTime >= 21 && endTime > 21) {
     		totalPay = (endTime - startTime) * 15;
     	}
-	}
-
-	public void setTotalPay(double totalPay) {
-		this.totalPay = totalPay;
 	}
 
 	public double getTotalPay() {
